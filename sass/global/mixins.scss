@@ -1,0 +1,52 @@
+@mixin container {
+	width: 84%;
+	margin: 0 auto;
+	@media #{$tablet-widths} {
+		min-width: 640px;
+	}
+	@media #{$desktop-widths} {
+		width: 70%;
+		min-width: 960px;
+	}
+}
+
+@mixin button {
+	display: block;
+	text-decoration: none;
+	color: white;
+	background-color: transparent;
+	border: 3px solid white;
+	font-weight: bold;
+	text-align: center;
+	outline: none;
+	
+	&:hover {
+		background-color: #ffffff;
+		color: $color-hover;
+	}
+	&:active {
+		color: rgba(210, 40, 86, 0.3);
+	}
+}
+@mixin greenButton {
+	display: block;
+	text-decoration: none;
+	color: white;
+	background-color: #2aab6d;
+	border: 3px solid white;
+	font-weight: bold;
+	text-align: center;
+	outline: none;
+	font-size: 18px;
+	text-transform: uppercase;
+	&:hover {
+		background-color: #1c9b5e;
+	}
+	&:active {
+		color: rgba(255, 255, 255, 0.3);
+	}
+}
+@mixin flex-column {
+	display: flex;
+	flex-direction: column;
+}

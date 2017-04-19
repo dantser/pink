@@ -3,10 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "description": "Личный проект «Пинк» от HTML Academy",
-  "author": "Маргарита Мунтанион",
+  "author": "dantser",
   "repository": {
     "type": "git",
-    "url": "git@github.com:htmlacademy-adaptive/64785-pink.git"
+    "url": "git+ssh://git@github.com/htmlacademy-adaptive/64785-pink.git"
   },
   "bugs": {
     "url": "https://github.com/htmlacademy-adaptive/64785-pink/issues"
@@ -28,5 +28,7 @@
   },
   "engines": {
     "node": "5.11"
-  }
+  },
+  "main": "gulpfile.js",
+  "license": "ISC"
 }

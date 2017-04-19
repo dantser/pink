@@ -1,0 +1,130 @@
+.contacts-map {
+	text-align: center;
+	background-color: #ffffff;
+}
+.wrapper {
+	@include container;
+
+}
+.promo__header--contacts {
+	font-weight: 300;
+	font-size: 24px;
+	line-height: 29px;
+	color: #283645;
+	padding: 42px 0 25px;
+	position: relative;
+	background-color: #ffffff;
+}
+.contacts-map__list {
+	display: flex;
+	flex-direction: column;
+}
+.contacts-map__item {
+	padding-bottom: 20px;
+
+	span {
+		color: #de6183;
+		font-size: 24px;
+		line-height: 31px;
+	}
+}
+.contacts__email a{
+	text-decoration: none;
+	color: inherit;
+	&:hover {
+		color: #000000;
+		text-decoration: underline;
+	}
+	&:active {
+		color: rgba(0, 0, 0, 0.3);
+		text-decoration: none;
+	}
+}
+.inner-title {
+	font-size: 18px;
+	margin: 0;
+	line-height: 24px;
+}
+.triangle {
+	position: relative;
+		&::after {
+			content: "";
+			position: absolute;
+			height: 105px;
+			width: 100%;
+			background: rgba(0, 0, 0, 0) url("../img/bg-triangle-white-footer.svg") no-repeat scroll center top / 100% 45px;
+			left: 0;
+			right: 0;
+			z-index: 11;
+	}
+}
+.map {
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+
+	iframe {
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+	}
+}
+
+@media #{$tablet-widths} {
+	.promo__header--contacts {
+		font-size: 40px;
+		line-height: 52px;
+	}
+	.contacts-map__list {
+		flex-direction: row;
+		justify-content: space-around;
+		flex-wrap: wrap;
+}
+	.contacts-map__item {
+		width: 33%;
+		padding-bottom: 20px;
+			&:nth-child(3){
+				align-self: center;
+				margin-top: 50px;
+				width: 40%;
+	}
+	
+}
+	.triangle {
+		&::after {
+			background-size: 100% 67px;
+		}
+	}
+}
+@media #{$desktop-widths} {
+	.triangle {
+		&::after {
+			background-size: 100% 97px;
+		}
+	}
+	.promo__header--contacts {
+		font-size: 50px;
+		margin-bottom: 0;
+	}
+	.contacts-map__list {
+		flex-direction: row-reverse;
+		flex-wrap: nowrap;
+	}
+	.contacts-map__item {
+		width: 100%;
+		&:nth-child(3){
+			margin-top: 0;
+			width: 100%;
+		}
+		.inner-title {
+			font-size: 18px ;
+		}
+		span {
+			font-size: 24px;
+		}
+	}
+	
+}

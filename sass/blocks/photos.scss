@@ -1,0 +1,132 @@
+.photo {
+	background-color: #ffffff;
+	
+		.head-slogan {
+			min-height: 100px;
+			box-sizing: border-box;
+			background-position: center;
+			background-size: cover;
+		}
+		.head-slogan__title {
+			font-size: 24px;
+			width: 67%;
+		}
+	
+	.footer {
+		display: flex;
+		flex-direction: column;
+		margin-bottom: 0;
+		.image-logo {
+			margin-bottom: 30px;
+			padding-left: 0;
+		}
+		.social {
+			margin-bottom: 30px;
+		}
+	}
+}
+.photos {
+	@include container;
+	display: flex;
+	flex-direction: column;
+}
+.photo-block {
+	background-color: #f2f2f2;
+	margin: auto;
+	margin-bottom: 20px;
+	max-width: 280px;
+}
+.photo__img {
+	padding-top: 0;
+}
+.photo__comment {
+	padding: 20px 15px;
+}
+.photo__name {
+	padding-right: 3px;
+}
+.photo__time {
+	text-transform: uppercase;
+	font-size: 12px;
+	color: rgba(0,0,0,0.7);
+}
+.photo__message {
+	margin-top: 5px;
+}
+.photo__like-block {
+	color: #d43560;
+	text-transform: uppercase;
+	font-size: 12px;
+}
+.photo__like-img {
+	background: url("../img/icon-heart.svg") center no-repeat;
+		display: inline-block;
+		vertical-align: middle;
+		width: 20px;
+		height: 20px;
+		margin-right: 10px;
+}
+
+@media #{$tablet-widths} {
+	.photo {
+		background-color: #ffffff;
+		.head-slogan {
+			padding-top: 20px;
+			min-height: 300px;
+			box-sizing: border-box;
+			background-position: center -40px;
+			background-size: cover;
+		}
+		.head-slogan__title {
+			font-size: 50px;
+			width: 67%;
+		}
+		.footer {
+			display: flex;
+			flex-direction: row;
+			.image-logo {
+			margin-bottom: 0;
+			}
+			.social {
+			margin-bottom: 0;
+			}
+		}
+	}
+	.photos {
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		
+		.photo-block {
+    	margin-bottom: 20px;
+			min-height: 444px;
+		}
+		.photo__img {
+			img {
+				width: 300px;
+				height: 300px;
+			}
+		}
+	}
+}
+@media #{$desktop-widths} {
+	.photo {
+		.head-slogan {
+			padding-top: 110px;
+			min-height: 350px;
+			box-sizing: border-box;
+			background-position: center -100px;
+			background-size: cover;
+		}
+		.promo-text {
+			font-size: 18px;
+			margin-bottom: 40px;
+		}
+	}
+	.photos {
+		width: 600px;
+	}
+	.photo-block {
+		min-height: 500px;
+	}
+}

@@ -1,0 +1,187 @@
+.reviews {
+	text-align: center;
+	position: relative;
+	box-sizing: border-box;
+	padding-bottom: 90px;
+	padding-top: 40px;
+	background-color: #ffffff;
+	
+	&::after {
+		background: rgba(0, 0, 0, 0) linear-gradient(to left top, #f2f2f2 0%, #f2f2f2 50%, transparent 50%, transparent 100%) no-repeat scroll center top / 100% 30px;
+    bottom: 0;
+    content: "";
+    height: 30px;
+    left: 0;
+    position: absolute;
+    right: 0;
+	}
+	input[type=radio] {
+		display: none;
+	}
+}
+
+.reviews__wrapper {
+	overflow: hidden;
+	position: relative;
+}
+.reviews__slider {
+	display: flex;
+	position: relative;
+	
+	width: 300%;
+
+}
+.reviews__item {
+	
+	width: 100%;
+	display: inline-block;
+	line-height: 30px;
+	padding: 0 50px;
+	margin: 0;
+	align-self: center; 
+	
+}
+
+.slider {
+position: relative;
+	label {
+		width: 10px;
+		height:10px;
+		margin-right: 10px;
+		display: inline-block;
+		position: relative;
+		cursor: pointer;
+		border-radius: 50%;
+		background-color: #bec2c7;
+		
+	}
+}
+//input[type=radio]:checked ~ .reviews__slider-control>label::before {
+//		content: "";
+//		position: absolute;
+//		top: -4px;
+//		right: -4px;
+//		width: 8px;
+//		height: 8px;
+//		border: 3px solid #000000;
+//		border-radius: 50%;
+//		background-color: #ffffff;
+//}
+.reviews__slider-control {
+	position: relative;
+}
+#review1:checked ~ .reviews__slider-control label:nth-of-type(1),
+#review2:checked ~ .reviews__slider-control label:nth-of-type(2),
+#review3:checked ~ .reviews__slider-control label:nth-of-type(3){
+	top: 2px;
+	border: 3px solid #000000;
+	background-color: transparent;
+}
+	
+#review3:checked ~ .reviews__slider>.slider__item {
+	transform: translateX(-200%);
+	transition-timing-function: ease;
+	transition-duration: 0.8s;
+}
+#review2:checked ~ .reviews__slider>.slider__item {
+	transform: translateX(-100%);
+	transition-timing-function: ease;
+	transition-duration: 0.8s;
+}
+#review1:checked ~ .reviews__slider>.slider__item {
+	transform: translateX(0);
+	transition-timing-function: ease;
+	transition-duration: 0.8s;
+}
+.reviews__slider-control-side {
+	display: none;
+}
+.reviews__autor {
+	font-size: 18px;
+	font-weight: bold;
+	font-style: normal;
+	span {
+		display: none;
+	}
+	
+}
+.sliderJs-btn {
+	display: none;
+}
+@media #{$tablet-widths} {
+	.reviews {
+		&::after {
+		background: rgba(0, 0, 0, 0) linear-gradient(to left top, #f2f2f2 0%, #f2f2f2 50%, transparent 50%, transparent 100%) no-repeat scroll center top / 100% 60px;
+		height: 60px;
+		}
+	}
+	.reviews__item {
+		display: flex;
+		flex-direction: column-reverse;
+		padding-bottom: 80px;
+		p {
+			font-size: 18px;
+			margin-bottom: 50px;
+		}
+	}
+	.reviews__author {
+		font-size: 24px;
+		font-weight: bold;
+		span {
+			display: block;
+			font-size: 16px;
+			font-weight: normal;
+			}
+	}
+}
+
+@media #{$desktop-widths} {
+	.reviews {
+		&::after {
+		background: rgba(0, 0, 0, 0) linear-gradient(to left top, #f2f2f2 0%, #f2f2f2 50%, transparent 50%, transparent 100%) no-repeat scroll center top / 100% 100px;
+		height: 100px;
+		}
+		&::before {
+			content: "";
+			width: 79px;
+			height: 64px;
+			position: absolute;
+			background: url("../../img/quotes.svg") no-repeat;
+			left: 50%;
+			top: 10%;
+			margin-left: -38px;
+		}
+	}
+	.reviews__item {
+		position: relative;
+		padding-top: 100px;
+		width: 66%;
+		margin: 0 auto;
+		
+	}
+	.reviews__author {
+		span {
+			font-size: 18px;
+		}
+	}
+	
+	.sliderJs-btn {
+		position: absolute;
+		top: 170px;
+		outline: none;
+		border: none;
+		background-color: transparent;
+		
+	}
+	.sliderJs-right {
+		right: 50px;
+	}
+	.sliderJs-left {
+		left: 50px;
+	}
+	.slider__item {
+	transform: translateX(-200%);
+	transition-timing-function: ease;
+	transition-duration: 0.8s;
+	}
+}

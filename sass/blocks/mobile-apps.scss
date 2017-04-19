@@ -1,0 +1,136 @@
+.mobile-apps {
+	background-color: #1d2631;
+	color: white;
+	background-image: url("../img/iphone-hand-mobile@1x.png"), url("../img/bg-back-mobile@1x.jpg");
+	background-position: center 173px, center 0;
+	background-repeat: no-repeat;
+	min-height: 700px;
+}
+
+.mobile-apps__download {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.mobile-apps__slogan {
+	padding: 90px 0 83px;
+	font-size: 24px;
+  font-weight: 300;
+  line-height: 1.2;
+	width: 285px;
+	text-align: center;
+}
+.download {
+	padding-top: 223px;
+}
+.mobile-apps__btn {
+	@include button;
+	border-radius: 25px;
+	font-size: 18px;
+	line-height: 18px;
+	padding: 15px 0;
+	margin: 30px auto;
+	max-width: 300px;
+}
+
+.mobile-apps__logos {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	display: flex;
+	justify-content: space-around;
+	width: 100%;
+	li {
+		margin: auto 0;
+	}
+}
+.mobile-apps__text {
+	width: 97%;
+	padding: 0;
+	margin: 0 auto;
+	text-align: center;
+	font-size: 14px;
+	font-weight: 300;
+	padding-bottom: 20px;
+	margin-bottom: 7px;
+}
+.mobile-apps__wrapper {
+	@include container;
+}
+
+@media #{$tablet-widths} {
+	.mobile-apps {
+		background-image: url("../img/iphone-hand-tablet@1x.png"), url("../img/background-tablet@1x.jpg");
+		background-position: right bottom, center;
+	}
+	.mobile-apps__slogan {
+		padding: 0;
+		margin-top: 123px;
+		margin-bottom: 32px;
+		width: 70%;
+		font-size: 40px;
+		line-height: 47px;
+	}
+	.mobile-apps__download {
+		padding-top: 80px;
+		align-items: center;
+		width: 40%;
+	}
+	.download {
+		padding: 0;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	.mobile-apps__btn {
+		margin-bottom: 40px;
+		min-width: 250px;
+		padding: 15px;
+	}
+	.mobile-apps__logos {
+		justify-content: space-between;
+		width: 60%;
+		margin-bottom: 30px;
+	}
+	.mobile-apps__text {
+		width: 85%;
+		padding: 0;
+		font-size: 18px;
+		line-height: 24px;
+	}
+}
+
+
+@media #{$desktop-widths} {
+	.mobile-apps {
+		background-image: url("../img/iphone-hand-desktop@1x.png"), url("../img/background-fullsize.jpg");
+		background-position: 70% bottom, center 75%;
+		background-size: none contain;
+	}
+	.mobile-apps__wrapper {
+		@include container;
+	}
+	.mobile-apps__slogan {
+		font-weight: 300;
+		font-size: 50px;
+		line-height: 60px;
+		margin-bottom: 50px;
+		width: 60%
+	}
+	.mobile-apps__btn {
+		width: 300px;
+		padding: 15px 0;
+		font-size: 21px;
+		border-radius: 25px;
+		margin-bottom: 65px;
+	}
+	.mobile-apps__logos {
+		margin-bottom: 50px;
+		justify-content: space-around;
+	}
+	.mobile-apps__text {
+		margin-bottom: 100px;
+		padding-bottom: 0;
+	}
+}

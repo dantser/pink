@@ -1,0 +1,28 @@
+.head-slogan {
+	background-color: #1d2631;
+	color: #ffffff;
+	background-image: url("../img/bg-back-mobile@1x.jpg");
+	background-position: center 0;
+	background-repeat: no-repeat;
+	margin-bottom: 50px;
+}
+.head-slogan__title {
+	padding: 60px 0;
+	font-size: 24px;
+  font-weight: 300;
+  line-height: 1.2;
+	width: 50%;
+	text-align: center;
+	margin: 0 auto;
+}
+
+@media #{$tablet-widths} {
+	.head-slogan {
+		margin-bottom: 80px;
+	}
+}
+@media #{$desktop-widths} {
+	.head-slogan {
+		margin-bottom: 90px;
+	}
+}
